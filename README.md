@@ -95,9 +95,13 @@ Set up the database by runnig the following command
 user@pc:~/taker_api$  rails db:create
 ```
 
-Download the database called db.sql and locate it one directory up to your project
+Download the database called db.sql and move it one directory up to your project
 
 ![DB Directory](app/img/code.png) 
+
+Go to the config/database.yml file and modify the username and password with your mysql user credentials
+
+![DB Directory](app/img/database.png) 
 
 Run the following command to import the db.sql into your taker_api_development database 
 
