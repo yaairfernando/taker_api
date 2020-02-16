@@ -66,6 +66,7 @@ module Api
 
     def update
       @activity_log.duration = TimeDifference.between(@activity_log.start_time, ActiveSupport::TimeZone['UTC'].parse(params[:stop_time])).in_minutes
+      @activity_log.status = 1
       if @activity_log.update(activity_log_params_update)
         render json: {
           status: 200,
@@ -92,7 +93,7 @@ module Api
     end
 
     def activity_log_params_update
-      params.require(:activity_log).permit(:stop_time, :comments)
+      params.require(:activity_log).permit(:stop_time, :comments, :status)
     end
 
     def format_data(activity_log)
