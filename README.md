@@ -129,6 +129,10 @@ user@pc:~$ rails server
 
 Open your browser on [http://localhost:3000](http://localhost:3000)
 
+<p>To run the client go and follow the instruction here:</p>
+
+[day_care_application](https://github.com/YairFernando67/taker_admin_app)
+
 ## Contact
 
 👤 **Yair Fernando Facio**

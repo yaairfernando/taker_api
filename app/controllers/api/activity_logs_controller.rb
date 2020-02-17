@@ -18,7 +18,7 @@ module Api
       @activity_logs.order('start_time DESC')
       activities = format_data(@activity_logs) if @activity_logs
 
-      activities.sort! { |a, b| b[:start_time] <=> a[:stop_time] }
+      activities.sort! { |a, b| a[:stop_time] <=> b[:start_time] }
       activities = "There are no records that match your search" if activities === []
       count = activities.size if activities
       count = 0 if activities.class == String
